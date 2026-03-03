@@ -2,7 +2,5 @@
   publish = "."
   functions = "netlify/functions"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Removed generic SPA redirects because this is a multi-page static site.
+# This prevents form submissions from being redirected to index.html incorrectly.
