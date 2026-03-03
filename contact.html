@@ -68,31 +68,88 @@
         </header>
 
         <section class="contact-form-section">
-            <form name="contact" method="POST" action="/success.html" data-netlify="true" class="contact-form">
+            <div id="form-feedback" class="form-feedback"></div>
+            <form id="contact-form" name="contact" method="POST" data-netlify="true" class="contact-form">
                 <input type="hidden" name="form-name" value="contact" />
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email" required>
-                </div>
+
                 <div class="form-group">
                     <label for="message">Message</label>
                     <textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
                 </div>
-                <button type="submit" class="btn">Send Message</button>
+
+                <div class="form-footer">
+                    <button type="submit" id="submit-btn" class="btn btn-primary">
+                        <span class="btn-text-content">Send Message</span>
+                        <span class="btn-loader"></span>
+                    </button>
+                    <p class="form-note">Reply within 24-48 hours</p>
+                </div>
             </form>
         </section>
 
         <section class="contact-info">
-            <p class="social-link">Direct Email</p>
-            <a href="mailto:hello@thesanctuaryliving.co">hello@thesanctuaryliving.co</a>
+            <div class="info-card">
+                <p class="social-link">Direct Email</p>
+                <a href="mailto:hello@thesanctuaryliving.co">hello@thesanctuaryliving.co</a>
+            </div>
 
-            <p class="social-link" style="margin-top: 3rem;">Follow our Journey</p>
-            <a href="https://www.pinterest.com/Living_Sanctuary/" target="_blank">Pinterest</a>
+            <div class="info-card">
+                <p class="social-link">Follow our Journey</p>
+                <a href="https://www.pinterest.com/Living_Sanctuary/" target="_blank">Pinterest</a>
+            </div>
         </section>
+
+        <script>
+            const form = document.getElementById('contact-form');
+            const feedback = document.getElementById('form-feedback');
+            const submitBtn = document.getElementById('submit-btn');
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                // Visual Loading State
+                submitBtn.classList.add('loading');
+                submitBtn.disabled = true;
+                feedback.style.display = 'none';
+
+                const formData = new FormData(form);
+
+                try {
+                    const response = await fetch("/", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                        body: new URLSearchParams(formData).toString(),
+                    });
+
+                    if (response.ok) {
+                        feedback.innerHTML = "✧ Message sent successfully! We'll be in touch soon.";
+                        feedback.className = "form-feedback success";
+                        feedback.style.display = 'block';
+                        form.reset();
+                    } else {
+                        throw new Error("Server responded with an error");
+                    }
+                } catch (error) {
+                    feedback.innerHTML = "Oops! Something went wrong. Please try again or email us directly.";
+                    feedback.className = "form-feedback error";
+                    feedback.style.display = 'block';
+                } finally {
+                    submitBtn.classList.remove('loading');
+                    submitBtn.disabled = false;
+                }
+            });
+        </script>
     </main>
 
     <footer>
