@@ -14,25 +14,65 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        .contact-container {
-            max-width: 800px;
+        .about-contact-container {
+            max-width: 1000px;
             margin: 8rem auto;
             padding: 0 2rem;
-            text-align: center;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 8rem;
+        }
+
+        .about-image {
+            width: 100%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            aspect-ratio: 4/5;
+            object-fit: cover;
+        }
+
+        .about-text h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: var(--text-color);
+            opacity: 0.9;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-wrapper {
+            background: #fcf8f5;
+            padding: 4rem;
+            border-radius: var(--radius);
         }
 
         .contact-header {
-            margin-bottom: 4rem;
+            text-align: center;
+            margin-bottom: 3rem;
         }
 
         .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
             margin-top: 4rem;
+            text-align: center;
         }
 
         .contact-info a {
             display: block;
-            margin: 1.5rem 0;
-            font-size: 1.25rem;
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
             color: var(--accent-color);
             font-weight: 500;
         }
@@ -45,7 +85,22 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .contact-wrapper {
+                padding: 2rem;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 2rem;
+            }
         }
     </style>
 </head>
@@ -56,59 +111,75 @@
             <a href="index.html" class="logo">THE sanctuary living co.</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html#categories">Living Room</a></li>
+                <li><a href="amazon-finds.html">Amazon Finds</a></li>
+                <li><a href="blogs.html">Blog</a></li>
+                <li><a href="contact.html">About & Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <main class="contact-container">
-        <header class="contact-header">
-            <h1 class="serif">Get in Touch</h1>
-            <p>We'd love to hear from you. Whether you have a question about a curated find or just want to say hello.
-            </p>
-        </header>
-
-        <section class="contact-form-section">
-            <div id="form-feedback" class="form-feedback"></div>
-            <form id="contact-form" name="contact" method="POST" data-netlify="true" class="contact-form">
-                <input type="hidden" name="form-name" value="contact" />
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
-                </div>
-
-                <div class="form-footer">
-                    <button type="submit" id="submit-btn" class="btn btn-primary">
-                        <span class="btn-text-content">Send Message</span>
-                        <span class="btn-loader"></span>
-                    </button>
-                    <p class="form-note">Reply within 24-48 hours</p>
-                </div>
-            </form>
+    <main class="about-contact-container">
+        <!-- About Section -->
+        <section class="about-grid">
+            <img src="small_living_room_layout.jpg" alt="Intentional living room design" class="about-image">
+            <div class="about-text">
+                <span class="social-link" style="color: var(--accent-color);">Our Story</span>
+                <h1 class="serif">About THE Sanctuary</h1>
+                <p>Welcome to THE sanctuary living co. Our mission is to help you create spaces that feel like a literal breath of fresh air. We believe in intentional living, where every piece has a purpose and every corner evokes a sense of calm, refinement, and timeless elegance.</p>
+                <p>Whether you're starting from scratch in a new home or looking to elevate a specific room, we curate beautifully crafted pieces, deep-dive styling guides, and accessible luxury finds directly from the market to your screen.</p>
+                <p>Your home is your ultimate sanctuary. Let's make it beautiful together.</p>
+            </div>
         </section>
 
-        <section class="contact-info">
-            <div class="info-card">
-                <p class="social-link">Direct Email</p>
-                <a href="mailto:hello@thesanctuaryliving.co">hello@thesanctuaryliving.co</a>
+        <!-- Contact Section -->
+        <section class="contact-wrapper">
+            <header class="contact-header">
+                <h2 class="serif">Get in Touch</h2>
+                <p style="margin-top: 1rem;">We'd love to hear from you. Whether you have a question about a curated find or just want to chat styling.</p>
+            </header>
+
+            <div class="contact-form-section">
+                <div id="form-feedback" class="form-feedback"></div>
+                <form id="contact-form" name="contact" method="POST" data-netlify="true" class="contact-form">
+                    <input type="hidden" name="form-name" value="contact" />
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
+                    </div>
+
+                    <div class="form-footer">
+                        <button type="submit" id="submit-btn" class="btn btn-primary">
+                            <span class="btn-text-content">Send Message</span>
+                            <span class="btn-loader"></span>
+                        </button>
+                        <p class="form-note">Reply within 24-48 hours</p>
+                    </div>
+                </form>
             </div>
 
-            <div class="info-card">
-                <p class="social-link">Follow our Journey</p>
-                <a href="https://www.pinterest.com/Living_Sanctuary/" target="_blank">Pinterest</a>
+            <div class="contact-info">
+                <div class="info-card">
+                    <p class="social-link">Direct Email</p>
+                    <a href="mailto:hello@thesanctuaryliving.co">hello@thesanctuaryliving.co</a>
+                </div>
+
+                <div class="info-card">
+                    <p class="social-link">Follow our Journey</p>
+                    <a href="https://www.pinterest.com/Living_Sanctuary/" target="_blank">Pinterest</a>
+                </div>
             </div>
         </section>
 
