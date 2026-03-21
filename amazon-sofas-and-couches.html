@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Sofas & Couches | THE sanctuary living co.</title>
+    <meta name="description" content="A curated storefront of the best premium sofas and couches on Amazon.">
+
+    <meta name="p:domain_verify" content="363bf9c3bbf6d48404ded9b2160127ae" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .storefront-header {
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            background-color: var(--section-alt);
+        }
+
+        .storefront-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .storefront-header p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .storefront-container {
+            max-width: 1200px;
+            margin: 4rem auto 8rem;
+            padding: 0 2rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 3rem;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image-wrapper {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            line-height: 1.3;
+            color: var(--text-color);
+        }
+
+        .product-desc {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .buy-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            background: var(--text-color);
+            color: var(--white);
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .buy-button:hover {
+            background: var(--accent-color);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .buy-button svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* Back to Categories */
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #666;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .storefront-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">THE sanctuary living co.</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#categories">Living Room</a></li>
+                <li><a href="amazon-finds.html" class="active">Amazon Finds</a></li>
+                <li><a href="blogs.html">Blog</a></li>
+                <li><a href="contact.html">About & Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="storefront-header">
+        <h1 class="serif">Sofas & Couches Collection</h1>
+        <p>Curated, premium seating alternatives directly from Amazon. Scroll, explore, and elevate your sanctuary.</p>
+    </header>
+
+    <main class="storefront-container">
+        <a href="amazon-finds.html" class="back-link">← Back to All Categories</a>
+
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="poly_capri_real.jpg" alt="Poly & BARK Capri Sofa" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Poly & BARK Capri 99" Performance Fabric Sofa</h3>
+                    <p class="product-desc">A beautiful bright ash 99-inch straight sofa with a modern square-arm
+                        design, loose cushions, and a high-quality solid frame.</p>
+                    <a href="https://amzn.to/4unwYwx" target="_blank" class="buy-button">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+                        </svg>
+                        View on Amazon
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="poly_bark_napa_green.png"
+                        alt="Poly & BARK Napa Velvet Sofa" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Poly & BARK Napa 88.5" Velvet Sofa</h3>
+                    <p class="product-desc">Deep seating, luxurious green velvet upholstery finish, and clean modern
+                        lines. Perfect for adding a rich moody touch.</p>
+                    <a href="https://amzn.to/46U6GIo" target="_blank" class="buy-button">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+                        </svg>
+                        View on Amazon
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="faux_leather_brown.png"
+                        alt="Faux Leather Couch" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">3-Seater Faux Leather Modern Couch</h3>
+                    <p class="product-desc">Rich dark brown faux leather sofa featuring wide armrests, wood legs, and
+                        two cozy throw pillows for an organic aesthetic.</p>
+                    <a href="https://amzn.to/4bh7KHx" target="_blank" class="buy-button">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+                        </svg>
+                        View on Amazon
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="acanva_cream_velvet.png"
+                        alt="Acanva Cream Velvet Modular" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Acanva Luxury Curved Velvet Sectional</h3>
+                    <p class="product-desc">Minimalist modern tight curved back velvet sofa in a timeless cream tone. A
+                        4-seater modular centerpiece for an elegant living room.</p>
+                    <a href="https://amzn.to/3OYO2Jj" target="_blank" class="buy-button">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+                        </svg>
+                        View on Amazon
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="acanva_white_boucle.png"
+                        alt="Acanva White Boucle Curved Couch" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Acanva Modern Curved Boucle Couch</h3>
+                    <p class="product-desc">A stunning 114" curved modular sectional made of comfy white boucle fabric.
+                        Brings a fluffy, sun-drenched coastal vibe to any sanctuary.</p>
+                    <a href="https://amzn.to/4ulh4CY" target="_blank" class="buy-button">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+                        </svg>
+                        View on Amazon
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="morden_fort_chenille.png"
+                        alt="Morden Fort 91 Cloud Couch" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Morden Fort 91" Chenille Cloud Couch</h3>
+                    <p class="product-desc">Premium 3-seater curved cream white sofa featuring three round pillows and a
+                        solid wood base for grounded, inviting comfort.</p>
+                    <a href="https://amzn.to/4b4E8yh" target="_blank" class="buy-button">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+                        </svg>
+                        View on Amazon
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="acanva_sectional_real.jpg" alt="Acanva Minimalist Sectional Set" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Acanva Luxury Minimalist Sectional Set</h3>
+                    <p class="product-desc">A gorgeous linen-like cream L-shape modular sectional set that perfectly
+                        anchors any modern living room. Includes an ottoman and chaise.</p>
+                    <a href="https://amzn.to/4sEMPoT" target="_blank" class="buy-button">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+                        </svg>
+                        View on Amazon
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="logo">THE sanctuary living co.</div>
+            <ul class="footer-links">
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="affiliate.html">Affiliate Disclosure</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <p>&copy; 2026 THE Sanctuary Living Co. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
