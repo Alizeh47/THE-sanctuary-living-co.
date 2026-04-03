@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Paint Palettes | THE sanctuary living co.</title>
+    <meta name="description" content="A curated storefront of the best premium paint palettes and color swatches on Amazon.">
+
+    <meta name="p:domain_verify" content="363bf9c3bbf6d48404ded9b2160127ae" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .storefront-header {
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            background-color: var(--section-alt);
+        }
+
+        .storefront-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .storefront-header p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .storefront-container {
+            max-width: 1200px;
+            margin: 4rem auto 8rem;
+            padding: 0 2rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 3rem;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image-wrapper {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
+            background-color: #f9f9f9;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            line-height: 1.3;
+            color: var(--text-color);
+        }
+
+        .product-desc {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .buy-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            background: var(--text-color);
+            color: var(--white);
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .buy-button:hover {
+            background: var(--accent-color);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .buy-button svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* Back to Categories */
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #666;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .storefront-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">THE sanctuary living co.</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#categories">Living Room</a></li>
+                <li><a href="amazon-finds.html" class="active">Amazon Finds</a></li>
+                <li><a href="blogs.html">Blog</a></li>
+                <li><a href="contact.html">About & Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="storefront-header">
+        <h1 class="serif">Paint Palette Collection</h1>
+        <p>Curated, premium paint palettes and color swatches directly from Amazon. Scroll, explore, and elevate your sanctuary's color story.</p>
+    </header>
+
+    <main class="storefront-container">
+        <a href="amazon-finds.html" class="back-link">← Back to All Categories</a>
+
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="paint_palette_1.png" alt="Curated Neutral Paint Swatches" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Curated Neutral Paint Swatches</h3>
+                    <p class="product-desc">A beautiful spread of premium aesthetic paint swatches featuring calm, airy neutral colors to help ground your sanctuary.</p>
+                    <a href="https://amzn.to/47J8RPs" target="_blank" class="buy-button">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+                        </svg>
+                        View on Amazon
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="paint_palette_2.png" alt="Moody Dark Interior Paint Deck" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Moody Dark Interior Paint Deck</h3>
+                    <p class="product-desc">A rich, beautifully fanned-out deck of moody dark paint swatches for designing spaces with a deep, dramatic aesthetic.</p>
+                    <a href="https://amzn.to/4miCMnx" target="_blank" class="buy-button">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+                        </svg>
+                        View on Amazon
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="paint_palette_3.png" alt="Warm Earth Tone Palette Set" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Warm Earth Tone Palette Set</h3>
+                    <p class="product-desc">Timeless warm earth tone swatches curated for creating inviting, deeply comfortable rooms filled with a natural vibe.</p>
+                    <a href="https://amzn.to/41GL7Ia" target="_blank" class="buy-button">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+                        </svg>
+                        View on Amazon
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="paint_palette_4.png" alt="Light & Airy Pastel Swatches" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Light & Airy Pastel Swatches</h3>
+                    <p class="product-desc">A curated set of light and vibrant pastel paint swatches perfect for bringing a feeling of openness, calm, and joy indoors.</p>
+                    <a href="https://amzn.to/4sasl6U" target="_blank" class="buy-button">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+                        </svg>
+                        View on Amazon
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="paint_palette_5.png" alt="Hue & Habitat Interior Design Guide" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Premium Interior Paint Design Guide</h3>
+                    <p class="product-desc">An aesthetic and highly curated guide book loaded with paint color palettes, texture pairings, and inspiration for your sanctuary.</p>
+                    <a href="https://amzn.to/3OlNVHD" target="_blank" class="buy-button">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+                        </svg>
+                        View on Amazon
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="logo">THE sanctuary living co.</div>
+            <ul class="footer-links">
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="affiliate.html">Affiliate Disclosure</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <p>&copy; 2026 THE Sanctuary Living Co. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
